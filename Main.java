@@ -113,16 +113,8 @@ class Main
                 maxProfit[i] = maxProfit[i-1];
             }
         }
-        answer[1] += totalEarnings-maxProfit[n-1];
-        // `maxProfit[n-1]` stores the maximum profit
-        //System.out.println("The maximum profit is " + maxProfit[n-1]);
-
-        // `tasks[n-1]` stores the index of jobs involved in the maximum profit
-//        System.out.print("The jobs involved in the maximum profit are ");
-//        for (int i: tasks.get(n-1)) {
-//            System.out.print(jobs.get(i));
-//        }
         answer[0] = (numberOfJobs - tasks.get(n-1).size());
+        answer[1] += totalEarnings-maxProfit[n-1];
     }
 
     public static void main(String[] args)
