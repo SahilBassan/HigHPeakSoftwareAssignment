@@ -18,16 +18,8 @@ class Job
 
 class Main
 {
-    //Actual array in which 1st index is going to store number of works for others and
-    //second index stores number of earning done by others as said in statement
-    //Declaring outside because we need it at both the methods
-
     static int[] answer = new int[2];
     static int totalEarnings;
-    // Function to perform a binary search on the given jobs, which are sorted
-    // by finish time. The function returns the index of the last job, which
-    // doesn't conflict with the given job, i.e., whose finish time is
-    // less than or equal to the given job's start time.
     public static int findLastNonConflictingJob(List<Job> jobs, int n)
     {
         // search space
@@ -56,8 +48,6 @@ class Main
         return -1;
     }
 
-    // Function to print the non-overlapping jobs involved in maximum profit
-    // using dynamic programming
     public static void findMaxProfitJobs(List<Job> jobs, int numberOfJobs)
     {
         // sort jobs in increasing order of their finish times
@@ -71,8 +61,6 @@ class Main
             return;
         }
 
-        // `maxProfit[i]` stores the maximum profit possible for the first `i` jobs,
-        // and `tasks[i]` stores the index of jobs involved in the maximum profit
         int[] maxProfit = new int[n];
 
         List<List<Integer>> tasks = new ArrayList<>();
